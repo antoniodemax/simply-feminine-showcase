@@ -1,24 +1,51 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
+import { Nav } from "@/components/sfn/Nav";
+import { Hero } from "@/components/sfn/Hero";
+import { Story } from "@/components/sfn/Story";
+import { Pillars } from "@/components/sfn/Pillars";
+import { Projects } from "@/components/sfn/Projects";
+import { Events } from "@/components/sfn/Events";
+import { Testimonials } from "@/components/sfn/Testimonials";
+import { Partners } from "@/components/sfn/Partners";
+import { Sponsorship } from "@/components/sfn/Sponsorship";
+import { Contact } from "@/components/sfn/Contact";
+import { Footer } from "@/components/sfn/Footer";
+
+const title = "Simply Feminine Network — Dignity, Leadership & Legacy for Women";
+const description =
+  "Simply Feminine Network empowers women across Kenya through dignity programmes, mentorship, leadership development and community partnerships.";
+
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title },
+      { name: "description", content: description },
+      { property: "og:title", content: title },
+      { property: "og:description", content: description },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="min-h-screen bg-cream">
+      <Nav />
+      <main>
+        <Hero />
+        <Story />
+        <Pillars />
+        <Projects />
+        <Events />
+        <Testimonials />
+        <Partners />
+        <Sponsorship />
+        <Contact />
+      </main>
+      <Footer />
     </div>
   );
 }
