@@ -44,12 +44,6 @@ export function Hero() {
           </Reveal>
 
           <Reveal delay={90}>
-            <p className="mt-7 text-[0.68rem] font-semibold tracking-[0.32em] text-gold uppercase">
-              — Founded by Tabitha Mwelu John —
-            </p>
-          </Reveal>
-
-          <Reveal delay={160}>
             <h1 className="mt-5 font-display text-[2.7rem] leading-[1.03] font-semibold text-cream sm:text-6xl lg:text-[4.6rem]">
               Women of Purpose.
               <br />
