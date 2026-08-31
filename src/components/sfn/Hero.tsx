@@ -34,15 +34,6 @@ export function Hero() {
 
       <div className="shell w-full pt-36 pb-16 lg:pb-24">
         <div className="max-w-3xl">
-          <Reveal>
-            <span
-              className="inline-flex items-center gap-2 px-3.5 py-2 text-[0.6rem] font-semibold tracking-[0.3em] uppercase"
-              style={{ backgroundColor: "var(--gold)", color: "var(--charcoal)" }}
-            >
-              Pride of Kenya Awards 2025 — NGO of the Year
-            </span>
-          </Reveal>
-
           <Reveal delay={90}>
             <h1 className="mt-5 font-display text-[2.7rem] leading-[1.03] font-semibold text-cream sm:text-6xl lg:text-[4.6rem]">
               Women of Purpose.
